@@ -1,10 +1,10 @@
 # In the search for an optimal multi-view crop classifier
 Public repository of our work "IN THE SEARCH FOR OPTIMAL MULTI-VIEW LEARNING MODELS FOR CROP CLASSIFICATION WITH GLOBAL REMOTE SENSING DATA"
 
-> Now we have created a package to use multi-view learning models in a easy way in PyTorch: [https://github.com/fmenat/mvlearning](https://github.com/fmenat/mvlearning)
+> Now we have created a package to use multi-view learning models in a easy way in PyTorch: https://github.com/fmenat/mvlearning
 
 ## Data
-The data used comes from https://github.com/nasaharvest/cropharvest. However we also share the structures that we used on Google Drive: https://drive.google.com/drive/folders/1aPlctAL8B5dXSdpM55fr3-RUmAHO3quj
+The data used comes from https://github.com/nasaharvest/cropharvest. However we also share the code used to generate the data structures that we used in [data folder](./data).
 
 ### Training
 * To train the Input fusion strategy:  
