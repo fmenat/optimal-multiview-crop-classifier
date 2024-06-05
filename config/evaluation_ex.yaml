@@ -1,0 +1,8 @@
+output_dir_folder: /home/mena/Documents/PhD/views_23/views_analysis_IGARSSext/outputs_test
+input_dir_folder: /home/mena/Documents/PhD/views_23/data
+
+data_name: cropharvest_togo-eval_crop #options are cropharvest_Kenya_maize, cropharvest_global_crop, cropharvest_togo-eval_crop
+
+methods_to_plot: null #consider all
+
+plot_runs: False
