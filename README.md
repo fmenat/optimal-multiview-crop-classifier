@@ -1,0 +1,2 @@
+# optimal-multiview-crop-classifier
+ Public repository of our work "IN THE SEARCH FOR OPTIMAL MULTI-VIEW LEARNING MODELS FOR CROP CLASSIFICATION WITH GLOBAL REMOTE SENSING DATA"
