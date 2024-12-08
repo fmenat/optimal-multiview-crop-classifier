@@ -18,7 +18,6 @@ import numpy as np
 import copy
 
 from .base_encoders import Base_Encoder
-from .presto_model import Presto
 
 class LTAE(Base_Encoder):
     def __init__(self, in_channels=128, n_head=16, d_k=8, n_neurons=[256,128], dropout=0.2, d_model=256,
@@ -414,26 +413,3 @@ class FC_BatchNorm_Relu_Dropout(torch.nn.Module):
 
     def forward(self, X):
         return self.block(X)
-
-
-class PRESTO_encoder(Base_Encoder):
-    # Only for Input fusion
-    def __init__(self, embedding_size=128, n_layers=2, max_sequence_length=12, **kwargs):
-        super(PRESTO_encoder, self).__init__()
-
-        self.embedding_size = embedding_size
-        self.n_layers = n_layers
-        self.encoder = Presto.construct(encoder_embedding_size=embedding_size,encoder_depth=n_layers, max_sequence_length=max_sequence_length).encoder
-
-        #self.encoder = Presto.load_pretrained().encoder
-
-    def forward(self,x):
-        x = torch.cat((x[:,:,:11],x[:,:,12:]), dim=-1)
-        dynamic_world = torch.ones(x.shape[0], x.shape[1], dtype=torch.int32).to(x.device)*9 #(batch_Size, num_timesteps) shape
-        latlons = torch.zeros(x.shape[0], 2).to(x.device) #TODO: fill up
-
-        out_ =  self.encoder(x, dynamic_world, latlons, mask=None, month=1, eval_task=True)
-        return out_
-
-    def get_output_size(self):
-        return self.embedding_size

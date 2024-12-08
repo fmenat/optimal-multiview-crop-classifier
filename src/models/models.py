@@ -1,7 +1,7 @@
 import torch, copy
 
 from .single.encoders import MLP, RNNet
-from .single.encoders_sota import LTAE, TemporalAttentionEncoder, TempCNN, PRESTO_encoder
+from .single.encoders_sota import LTAE, TemporalAttentionEncoder, TempCNN
 from .single.base_encoders import Generic_Encoder
 from .single.base_decoders import Generic_Decoder
 
@@ -52,12 +52,6 @@ def create_model(input_dims, emb_dims: int, model_type: str = "mlp", n_layers: i
         if "layer_size" in args:
             args["hidden_dims"] = args["layer_size"]
         sub_model = TempCNN( **args)
-
-    elif model_type == "presto": #only for input fusion (specialized model)
-        args["embedding_size"] = args["embedding_size"] #input dim
-        args["num_layers"] = n_layers
-        args["max_sequence_length"] = 12 #hardcode to 12 months
-        sub_model = PRESTO_encoder( **args)
 
     else:
         raise ValueError(f'Invalid value for model_type: {self.model_type}. Valid values: ["mlp","cnn","rnn","gru","lstm"]')
