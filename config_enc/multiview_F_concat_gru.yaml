@@ -1,7 +1,8 @@
 output_dir_folder: /path/to/output/dir/store/predictions
 input_dir_folder: /path/to/data
+additional_method_name: -gru
 
-data_name: cropharvest_togo-eval_crop
+data_name: cropharvest_global_crop
 
 training:
   max_epochs: 1000
@@ -14,7 +15,7 @@ training:
     verbose: True
 
 experiment:
-  runs: 10 #repetitions
+  runs: 20 #repetitions
   val_size: 0.1
   mlflow_runs_exp: True
   preprocess:
@@ -24,7 +25,7 @@ experiment:
 
   save_individually: False #if representations are saved individually -- only for feature based
 
-view_names: ["S2","S1","weather", "VI", "DEM"]
+view_names: ["S2","S1","weather", "VI" , "DEM"]
 
 architecture:
   encoders:
@@ -65,9 +66,8 @@ architecture:
     batchnorm: True
 
 method: #fusion method
-  hybrid: True
   feature: True
-  agg_args: #only for feature
-    mode: avg
+  agg_args:
+    mode: concat
     adaptive: False
     features: False

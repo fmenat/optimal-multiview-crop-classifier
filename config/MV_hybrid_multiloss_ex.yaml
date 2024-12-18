@@ -1,5 +1,5 @@
-output_dir_folder: /home/mena/Documents/PhD/views_23/views_analysis_IGARSSext/outputs_test
-input_dir_folder: /home/mena/Documents/PhD/views_23/data
+output_dir_folder: /path/to/output/dir/store/predictions
+input_dir_folder: /path/to/data
 
 data_name: cropharvest_togo-eval_crop
 
