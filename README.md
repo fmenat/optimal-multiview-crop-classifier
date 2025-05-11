@@ -1,7 +1,7 @@
 # In the search for an optimal multi-view crop classifier
-<a href="https://github.com/fmenat/mvlearning">  <img src="https://img.shields.io/badge/Package-mvlearning-blue"/>  </a> [![paper](https://img.shields.io/badge/arXiv-2308.05407-D12424)](https://www.arxiv.org/abs/2308.05407) 
+<a href="https://github.com/fmenat/mvlearning">  <img src="https://img.shields.io/badge/Package-mvlearning-blue"/>  </a> 
+[![paper](https://img.shields.io/badge/arXiv-2308.05407-D12424)](https://www.arxiv.org/abs/2308.05407) 
 
-Public repository of our work in the search for an optimal multi-view crop classifier
 
 ## Data
 The data used comes from https://github.com/nasaharvest/cropharvest. However we also share the code used to generate the data structures that we used in [data folder](./data).
@@ -36,4 +36,3 @@ pip install -r requirements.txt
 # :scroll: Source
 
 Mena, Francisco, Diego Arenas, and Andreas Dengel. "*In the Search for Optimal Multi-view Learning Models for Crop Classification with Global Remote Sensing Data.*", 2024.
-* :unlock: [Preprint](https://arxiv.org/abs/2403.16582)
