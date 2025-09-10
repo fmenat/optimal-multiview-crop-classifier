@@ -3,9 +3,10 @@
 [![paper](https://img.shields.io/badge/arXiv-2308.05407-D12424)](https://www.arxiv.org/abs/2308.05407) 
 <a href="https://github.com/fmenat/mvlearning">  <img src="https://img.shields.io/badge/Package-mvlearning-blue"/>  </a> 
 
+> Public repository of our comparative work on various data fusion strategies and encoder architectures for crop classification.
+---
 
-## Data
-The data used comes from https://github.com/nasaharvest/cropharvest. However, we also share the code used to generate the data structures that we used in [data folder](./data).
+![strategies](imgs/strategies.jpg)
 
 ### Training
 * To train the Input fusion strategy:  
@@ -20,6 +21,13 @@ python train_singleview_pool.py -s config/singleviewpool_ex.yaml
 ```
 python train_multiview.py -s config/multiview_ex.yaml
 ```
+
+## Data
+
+![map](imgs/croph_map.jpg)
+
+The data used comes from https://github.com/nasaharvest/cropharvest. However, we also share the code used to generate the data structures that we used in [data folder](./data).
+
 
 ### Evaluation
 * To evaluate the model by its predictions (performance):
